@@ -7,25 +7,38 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Poppins:400,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
-:root{--azul:#181b34;--branco:#fff;--dourado:#FFD700;--cinza:#f8f9fb;--hover:#233169;--shadow:0 4px 24px #181b3422;--radius:18px;--trans:0.23s cubic-bezier(.4,0,.2,1)}
+:root{
+  --azul:#181b34;--branco:#fff;--dourado:#FFD700;--cinza:#f8f9fb;
+  --shadow:0 4px 24px #181b3422;--radius:18px;--trans:0.23s cubic-bezier(.4,0,.2,1)
+}
 body{margin:0;font-family:'Poppins','Montserrat',Arial,sans-serif;background:var(--cinza);color:var(--azul);min-height:100vh;display:flex;flex-direction:column}
-.header{background:var(--branco);padding:32px 0 18px 0;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;position:relative}
+.header{background:var(--branco);padding:32px 0 18px 0;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center}
 .header-content{display:flex;align-items:center;max-width:1100px;width:93vw;gap:20px;justify-content:space-between}
 .header-title{font-family:'Montserrat',Arial,sans-serif;font-size:2.8rem;font-weight:700;color:var(--azul);letter-spacing:2px}
 .header-contatos{display:flex;align-items:center;gap:14px}
 .contato-icon{background:var(--branco);color:var(--azul);border:none;border-radius:50%;width:43px;height:43px;display:flex;align-items:center;justify-content:center;font-size:1.35rem;box-shadow:0 2px 8px #23316922;cursor:pointer;transition:transform var(--trans),background var(--trans),color var(--trans)}
 .contato-icon.whatsapp{color:#25D366}.contato-icon.linkedin{color:#0a66c2}.contato-icon.email{color:var(--azul)}
 .contato-icon:hover{background:var(--azul);color:var(--dourado);transform:scale(1.11) rotate(-8deg)}
-.hero{background:linear-gradient(110deg,#eef3fb 60%,#f3eafe 100%);padding:54px 0 40px 0;position:relative;box-shadow:0 2px 12px #181b3411;display:flex;justify-content:center}
-.hero-content{display:flex;flex-direction:column;align-items:flex-start;max-width:1000px;width:93vw;gap:32px;z-index:2}
-.hero-resumo{font-size:1.12rem;color:#22264b;background:var(--branco);border-radius:var(--radius);box-shadow:0 2px 12px #181b3412;padding:20px 28px;line-height:1.7;font-weight:500;margin-bottom:8px;max-width:760px}
+.hero{background:linear-gradient(110deg,#eef3fb 60%,#f3eafe 100%);padding:54px 0 40px 0;box-shadow:0 2px 12px #181b3411;display:flex;justify-content:center}
+.hero-content{display:flex;flex-direction:column;align-items:flex-start;max-width:1000px;width:93vw;gap:32px}
+.hero-resumo{font-size:1.12rem;color:#22264b;background:var(--branco);border-radius:var(--radius);box-shadow:0 2px 12px #181b3412;padding:20px 28px;line-height:1.7;font-weight:500;max-width:760px}
 .btn-curriculo{background:linear-gradient(90deg,var(--azul),var(--dourado) 90%);color:var(--branco);border:none;border-radius:24px;font-size:1.07rem;font-family:'Montserrat',Arial,sans-serif;padding:13px 32px;font-weight:600;cursor:pointer;box-shadow:0 2px 12px #181b3411;transition:transform var(--trans),background var(--trans);display:inline-flex;align-items:center;gap:10px;text-decoration:none;margin-top:15px}
 .btn-curriculo:hover{background:linear-gradient(90deg,var(--dourado),var(--azul));transform:scale(1.09);color:var(--azul)}
-.section{max-width:1100px;margin:30px auto;background:var(--branco);padding:24px;border-radius:var(--radius);box-shadow:0 2px 16px #181b3416}
-.section h2{font-family:'Montserrat',Arial,sans-serif;font-size:1.6rem;margin-top:0;display:flex;align-items:center;gap:10px}
-ul.cursos-detalhes{list-style:none;padding:0}
-ul.cursos-detalhes li{margin-bottom:9px;padding-left:24px;position:relative}
-ul.cursos-detalhes li:before{content:"\f19d";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;left:0;color:var(--azul)}
+.cards-row{display:flex;gap:26px;flex-wrap:wrap;margin:34px auto;max-width:1100px;width:93vw}
+.card{background:var(--branco);border-radius:var(--radius);box-shadow:0 2px 16px #181b3416;padding:24px 28px;flex:1 1 310px;min-width:260px;display:flex;flex-direction:column;align-items:flex-start;gap:18px;transition:box-shadow var(--trans),transform var(--trans)}
+.card:hover{box-shadow:0 8px 40px #181b3440;transform:translateY(-6px) scale(1.02)}
+.card-title{font-family:'Montserrat',Arial,sans-serif;font-size:1.25rem;font-weight:700;display:flex;align-items:center;gap:11px}
+.card-title.premios{color:var(--dourado)}
+.card-title.cursos{color:var(--azul)}
+.list-resumo{margin:0;padding:0;list-style:none;font-size:1.03em}
+.list-resumo li{display:flex;align-items:center;gap:10px;margin-bottom:9px}
+.list-resumo li i{color:inherit}
+.btn-interno{margin-top:12px;background:none;border:2px solid var(--azul);color:var(--azul);border-radius:22px;font-size:1rem;padding:8px 25px;font-family:'Poppins',Arial,sans-serif;font-weight:600;cursor:pointer;box-shadow:0 2px 9px #181b3422;transition:background var(--trans),color var(--trans),border var(--trans),transform var(--trans);text-decoration:none;display:inline-block}
+.btn-interno:hover{background:var(--azul);color:var(--dourado);border-color:var(--dourado);transform:scale(1.06)}
+.hidden{display:none;margin-top:10px}
+.hidden ul{list-style:none;padding-left:20px}
+.hidden li{margin-bottom:6px}
+.hidden li i{margin-right:8px;color:var(--azul)}
 .footer{background:var(--azul);color:var(--branco);text-align:center;padding:38px 0 20px 0;margin-top:auto;box-shadow:0 -3px 22px #181b3833}
 .footer-nome{font-family:'Montserrat',Arial,sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:2px;margin-bottom:14px;display:block}
 .footer-contatos{display:flex;justify-content:center;gap:17px;margin:8px 0 0 0}
@@ -52,18 +65,48 @@ ul.cursos-detalhes li:before{content:"\f19d";font-family:"Font Awesome 6 Free";f
     <a href="leticia-francine-moraes-curriculo-resumido.pdf" download class="btn-curriculo"><i class="fa-solid fa-download"></i> Baixar Currículo em PDF</a>
   </div>
 </section>
-<div class="section">
-  <h2><i class="fa-solid fa-graduation-cap"></i> Todos os Cursos e Formações (+580h)</h2>
-  <ul class="cursos-detalhes">
-    <li>Inglês – EF English (2024/2025) – +200h – General English Levels 8 (B1), 10–12 (B2), 13–15 (C1), 16 (C2)</li>
-    <li>Business English – Human Resources (B1, B2, C1), Intercultural Communication (B1, C1), Airline Counter Service</li>
-    <li>Business English – Project Management, Telephoning, Social Skills, Presentations, Negotiations, Meetings, Management, Correspondence</li>
-    <li>Alura – Habilidades e Comportamento (39h): Pontos Fortes 1 e 2, Estresse 1 e 2, Eficácia, Inteligência Emocional, Síndrome do Impostor</li>
-    <li>Alura – Minha Carreira (até 56h): Desenvolvimento e Transição de Carreira, Propósito Profissional, Networking, Personal Branding</li>
-    <li>Alura – Produtividade (55h): Hábitos, Produtividade, Foco, Estratégias, Organização, Prioridades, Eficácia</li>
-    <li>Alura – Tecnologia e Projetos (151h): Lógica de Programação, JavaScript (DOM, APIs, dados), Front-End (HTML, CSS, Responsividade, Acessibilidade), Páginas Web (portfólio, catálogo, ferramentas interativas), Introdução à Computação, Repositório Digital, Funções e Listas, Conectando-se ao Mundo Profissional, Inovação & Gestão, Excel Avançado, IA com ChatGPT</li>
-  </ul>
+
+<div class="cards-row">
+  <div class="card">
+    <div class="card-title premios"><i class="fa-solid fa-medal"></i> Premiações</div>
+    <ul class="list-resumo" style="color:var(--dourado)">
+      <li><i class="fa-solid fa-medal"></i> OLISP 2025 – Ouro</li>
+      <li><i class="fa-solid fa-medal"></i> OMASP 2025 – Ouro (Fase Municipal)</li>
+      <li><i class="fa-solid fa-medal"></i> OMASP 2025 – Bronze (Fase Estadual)</li>
+    </ul>
+    <button class="btn-interno" onclick="togglePremiacoes()">Ver todas as premiações</button>
+    <div id="premiacoes-detalhes" class="hidden">
+      <ul>
+        <li><i class="fa-solid fa-medal"></i> OLISP – Olimpíada de Interpretação de Texto 2025 (Medalha de Ouro)</li>
+        <li><i class="fa-solid fa-medal"></i> OMASP – Olimpíada de Matemática 2025 (2ª fase Ouro, 3ª fase Bronze – Nível Estadual)</li>
+        <li><i class="fa-solid fa-medal"></i> REDASP 2024 – Olimpíada de Redação</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title cursos"><i class="fa-solid fa-certificate"></i> Cursos Principais</div>
+    <ul class="list-resumo">
+      <li><i class="fa-solid fa-certificate"></i> Gestão de Projetos – EF/Alura</li>
+      <li><i class="fa-solid fa-certificate"></i> Human Resources (Business English) – EF English</li>
+      <li><i class="fa-solid fa-certificate"></i> Inteligência Emocional – Alura</li>
+      <li><i class="fa-solid fa-certificate"></i> Produtividade e Organização – Alura</li>
+    </ul>
+    <button class="btn-interno" onclick="toggleCursos()">Ver todos os cursos</button>
+    <div id="cursos-detalhes" class="hidden">
+      <ul>
+        <li><i class="fa-solid fa-graduation-cap"></i> Inglês – EF English (2024/2025) – +200h – General English Levels 8 (B1), 10–12 (B2), 13–15 (C1), 16 (C2)</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Business English – Human Resources (B1, B2, C1), Intercultural Communication (B1, C1), Airline Counter Service</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Business English – Project Management, Telephoning, Social Skills, Presentations, Negotiations, Meetings, Management, Correspondence</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Alura – Habilidades e Comportamento (39h): Pontos Fortes 1 e 2, Estresse 1 e 2, Eficácia, Inteligência Emocional, Síndrome do Impostor</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Alura – Minha Carreira (até 56h): Desenvolvimento e Transição de Carreira, Propósito Profissional, Networking, Personal Branding</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Alura – Produtividade (55h): Hábitos, Produtividade, Foco, Estratégias, Organização, Prioridades, Eficácia</li>
+        <li><i class="fa-solid fa-graduation-cap"></i> Alura – Tecnologia e Projetos (151h): Lógica de Programação, JavaScript (DOM, APIs, dados), Front-End (HTML, CSS, Responsividade, Acessibilidade), Páginas Web (portfólio, catálogo, ferramentas interativas), Introdução à Computação, Repositório Digital, Funções e Listas, Conectando-se ao Mundo Profissional, Inovação & Gestão, Excel Avançado, IA com ChatGPT</li>
+      </ul>
+    </div>
+  </div>
 </div>
+
 <footer class="footer">
   <span class="footer-nome">Letícia Francine Moraes</span>
   <div class="footer-contatos">
@@ -73,5 +116,17 @@ ul.cursos-detalhes li:before{content:"\f19d";font-family:"Font Awesome 6 Free";f
   </div>
   <div class="footer-frase">“Fiz este site para aprender mais e mostrar que estou disposta a aprender.”</div>
 </footer>
+
+<script>
+function togglePremiacoes(){
+  const bloco=document.getElementById('premiacoes-detalhes');
+  bloco.classList.toggle('hidden');
+}
+function toggleCursos(){
+  const bloco=document.getElementById('cursos-detalhes');
+  bloco.classList.toggle('hidden');
+}
+</script>
+
 </body>
-</html>
+        </html>
